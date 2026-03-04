@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Oluseyi Kataye</h1>
+  <h4>IT Specialist</h4>
+  <div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="aboutme.html">About Me</a>
+</div>
+</div>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="CTEC450Bot"
+  agent-id="7446a772-c7eb-44bc-895d-93326075dde3"
+  language-code="en"
+></df-messenger>
+
+
+<div class="container">
+  <img class="comp_img" src="https://img.freepik.com/premium-vector/digital-presentation-screen-icon-concept-isolated-white-background_1253044-93240.jpg?semt=ais_incoming&w=740&q=80" alt="computer tech image">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3><b>An Introduction</b></h3>
+      <p>Hello. My name is Oluseyi Kataye, and I'm currently a student at Bowie State University pursuing my Bachelor's in Computer Technology.
+      My goals for the future are to eventually find a job in the IT or Cybersecurity Fields.</p>
+      <p>I like to watch TV, read books, and draw sometimes!</p>
+      <br>
+      <h3><b>Contact me here:</b></h3>
+      <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="2c09f238-0b7a-460c-97eb-5d27e3200639">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <input type="text" name="name" required>
+    <p>Name:</p>
+    <input type="email" name="email" required>
+    <p>Email:</p>
+    <textarea name="message" required></textarea>
+    <p>Message:</p>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+    <button type="submit">Submit Form</button>
+
+</form>
+      <h3><b>QR Code</b></h3>        
+      <p>This QR Code can be also be scanned for a link to this website.</p>
+      <img class="qr_code" src="https://us-east.storage.cloudconvert.com/tasks/450de979-02b0-4769-b6e3-ee44e14b4949/CTEC%20450%20QR%20Code%20smaller.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20251011%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20251011T123546Z&X-Amz-Expires=86400&X-Amz-Signature=c65dab566cfc273a055f4bcc7ac327e71c8f28497620ce845511eae074d5fc44&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22CTEC%20450%20QR%20Code%20smaller.jpg%22&response-content-type=image%2Fjpeg&x-id=GetObject" alt="qrcode">
+    </div>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+</body>
+</html>

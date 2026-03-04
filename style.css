@@ -1,0 +1,54 @@
+body {
+  background-color: lightblue;
+  padding: 25px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-image: url('https://img.freepik.com/free-photo/abstract-dark-blue-wallpaper-image_53876-94664.jpg');
+  background-size: cover;
+}
+
+
+
+/*Navigation Menu*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: SkyBlue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #87CEEB;
+  color: black;
+}
+.topnav a.active {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.container {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  width: 70;
+  Left: 60%;
+}
+.container2 {
+  color: white;
+  font-size: 20px;
+}
+.col-sm-4 {
+  text-align: center;
+}
+.comp_img {
+  position: absolute;
+  width: 55%;
+  Right: 115%;
+  height:95%;
+}
