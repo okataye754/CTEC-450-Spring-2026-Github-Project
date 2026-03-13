@@ -1,0 +1,55 @@
+print("*********Packet Sniffing Project Using Python*********\n")
+
+#imports the scapy library to be able to use scapy functions in python
+from scapy.all import *
+
+#creates the 'packet' variable and uses the sniff() function to sniff and capture packets on your network.
+#count = number of packets to be sniffed, in this case, 5 packets will be sniffed/captured
+#these captured packets are put into a list order that can be called upon and printed
+packet = sniff(filter="tcp",count=5)
+#'filter' filters for certain protocols and variables; in this case, the TCP protocol is being filtered for
+#NOTE: the command 'filter="host <ip address>"' can be used for a specific IP address
+
+#if source and destination ip address is not found, none will be stated
+#displays the Source and Destination IP address, protocol, and packet length for each packet
+if packet[0].getlayer(IP) is None: print("No Captured Packet 1 Source IP and Destination IP. \nCaptured Packet 1 Protocol name: ", packet[0].name,"\n Packet Length:",len(packet[0]))
+else:
+    print("\nCaptured Packet 1 Information: \n Source Address: ",packet[0].getlayer(IP).src, "\n Destination Address: ",packet[0].getlayer(IP).dst,
+        "\n Protocol name: ",print(packet[0].name),"\n Packet Length:",len(packet[0]))
+    
+if packet[1].getlayer(IP) is None: print("\nNo Captured Packet 2 Source IP and Destination IP. \nCaptured Packet 2 Protocol name: ", packet[1].name,"\n Packet Length:",len(packet[1]))
+else:
+    print("\nCaptured Packet 2 Information: \n Source Address: ",packet[1].getlayer(IP).src, "\n Destination Address: ",packet[1].getlayer(IP).dst,
+        "\n Protocol name: ",print(packet[1].name),"\n Packet Length:",len(packet[1]))
+    
+if packet[2].getlayer(IP) is None: print("\nNo Captured Packet 3 Source IP and Destination IP. \nCaptured Packet 3 Protocol name: ", packet[2].name,"\n Packet Length:",len(packet[2]))
+else:
+    print("\nCaptured Packet 3 Information: \n Source Address: ",packet[2].getlayer(IP).src, "\n Destination Address: ",packet[2].getlayer(IP).dst,
+        "\n Protocol name: ",print(packet[2].name),"\n Packet Length:",len(packet[2]))
+    
+if packet[3].getlayer(IP) is None: print("\nNo Captured Packet 4 Source IP and Destination IP. \nCaptured Packet 4 Protocol name: ", packet[3].name,"\n Packet Length:",len(packet[3]))
+else:
+    print("\nCaptured Packet 4 Information: \n Source Address: ",packet[3].getlayer(IP).src, "\n Destination Address: ",packet[3].getlayer(IP).dst,
+        "\n Protocol name: ",print(packet[3].name),"\n Packet Length:",len(packet[3]))
+    
+if packet[4].getlayer(IP) is None: print("\nNo Captured Packet 5 No Source IP and Destination IP. \nCaptured Packet 5 Protocol name: ", packet[4].name,"\n Packet Length:",len(packet[4]))
+else:
+    print("\nCaptured Packet 5 Information: \n Source Address: ",packet[4].getlayer(IP).src, "\n Destination Address: ",packet[4].getlayer(IP).dst,
+        "\n Protocol name: ",print(packet[4].name),"\n Packet Length:",len(packet[4]))
+
+#displays the summary of total packets captured, and the breakdown of each by protocol
+print("\nSummary Output")
+print(packet)
+
+
+print("\n****Alternate Way to Run Code****\n")
+#Alternate way to run this code and display it using while loop
+i = 0
+while i < len(packet):
+    if packet[i].getlayer(IP) is None: print("\nNo Captured Packet ", str(i+1), "Source IP and Destination IP. \nCaptured Packet 4 Protocol name: ", packet[i].name,"\n Packet Length:",len(packet[i]))
+    else:
+        print("\nCaptured Packet ", str(i+1) ," Information: \n Source Address: ",packet[i].getlayer(IP).src, "\n Destination Address: ",packet[i].getlayer(IP).dst,
+"\n Protocol name: ",print(packet[i].name),"\n Packet Length:",len(packet[i]))
+    i +=1
+print("\nSummary Output")
+print(packet)
